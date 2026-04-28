@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maldonado Automotive Group — Company Profile 2026</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#0A1628;--blue:#1D4ED8;--ltblue:#EFF6FF;--border:#E2E8F0;--text:#0F172A;--muted:#64748B;--bg:#F8FAFC;--white:#FFFFFF;--accent:#DBEAFE;--green:#059669;--ltgreen:#ECFDF5}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    nav{background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;position:sticky;top:0;z-index:100}
+    .nav-logo{width:32px;height:32px;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:white}
+    .nav-brand{display:flex;align-items:center;gap:12px}
+    .nav-title{color:white;font-weight:600;font-size:14px}
+    .nav-sub{color:var(--muted);font-size:11px}
+    .nav-links{display:flex;gap:4px}
+    .nav-links a{color:#94A3B8;text-decoration:none;font-size:12px;padding:5px 12px;border-radius:5px}
+    .nav-links a:hover{color:white;background:rgba(255,255,255,0.08)}
+    .hero{background:linear-gradient(160deg,var(--navy) 0%,#1B3A6B 100%);padding:72px 48px 60px}
+    .hero-tag{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#BAC8E0;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:20px}
+    .hero h1{font-size:clamp(36px,5vw,60px);font-weight:700;color:white;line-height:1.05;letter-spacing:-0.02em;margin-bottom:16px}
+    .hero h1 span{color:#93C5FD}
+    .hero-sub{font-size:16px;color:#94A3B8;max-width:580px;line-height:1.75;margin-bottom:36px}
+    .hero-meta{display:flex;gap:36px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1)}
+    .meta-item{display:flex;flex-direction:column;gap:3px}
+    .meta-label{font-size:10px;color:#475569;text-transform:uppercase;letter-spacing:0.08em;font-weight:600}
+    .meta-value{font-size:13px;color:#CBD5E1}
+    .stats{background:white;border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr)}
+    .stat{padding:32px 28px;text-align:center;border-right:1px solid var(--border)}
+    .stat:last-child{border-right:none}
+    .stat-num{font-size:42px;font-weight:700;color:var(--navy);line-height:1;letter-spacing:-0.02em}
+    .stat-lbl{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4}
+    .content{max-width:1080px;margin:0 auto;padding:64px 48px}
+    .sec{margin-bottom:64px}
+    .sec-hdr{display:flex;align-items:center;gap:14px;margin-bottom:32px;padding-bottom:14px;border-bottom:2px solid var(--border)}
+    .sec-icon{width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .sec-icon svg{width:20px;height:20px}
+    .icon-blue{background:#EFF6FF}.icon-teal{background:#F0FDFA}.icon-purple{background:#F5F3FF}.icon-amber{background:#FFFBEB}.icon-green{background:#ECFDF5}.icon-rose{background:#FFF1F2}.icon-slate{background:var(--bg)}
+    .sec-title{font-size:22px;font-weight:700;color:var(--navy);letter-spacing:-0.01em}
+    .sec-sub{font-size:13px;color:var(--muted);margin-top:2px}
+    .coverage-banner{background:var(--navy);border-radius:12px;padding:24px 28px;margin-bottom:32px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .coverage-label{font-size:10px;font-weight:700;color:#93C5FD;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px}
+    .coverage-value{font-size:15px;font-weight:600;color:white;line-height:1.4;margin-bottom:3px}
+    .coverage-note{font-size:12px;color:#94A3B8;line-height:1.5}
+    .about-grid{display:grid;grid-template-columns:1fr 300px;gap:40px}
+    .about-text p{font-size:15px;color:#374151;line-height:1.8;margin-bottom:18px}
+    .active-tag{display:inline-block;background:var(--ltgreen);color:var(--green);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:2px 8px;border-radius:4px;margin-right:4px;margin-bottom:3px}
+    .track-tag{display:inline-block;background:#F1F5F9;color:#475569;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:2px 8px;border-radius:4px;margin-right:4px;margin-bottom:3px}
+    
+    
+    .info-card{background:white;border-radius:12px;padding:28px;border:1px solid var(--border)}
+    .info-row{padding:13px 0;border-bottom:1px solid var(--border)}
+    .info-row:last-child{border-bottom:none}
+    .info-lbl{font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px}
+    .info-val{font-size:13px;color:var(--text);line-height:1.5}
+    .financing-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .fin-card{background:white;border-radius:12px;padding:26px;border:1px solid var(--border)}
+    .fin-card.primary{background:var(--navy);border-color:var(--navy)}
+    .fin-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px}
+    .fin-card.primary .fin-title{color:white}
+    .fin-text{font-size:14px;color:#374151;line-height:1.75}
+    .fin-card.primary .fin-text{color:#94A3B8}
+    .fin-bullets{list-style:none;margin-top:12px}
+    .fin-bullets li{font-size:13px;padding:5px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:9px;line-height:1.55;color:#374151}
+    .fin-card.primary .fin-bullets li{border-color:rgba(255,255,255,0.08);color:#94A3B8}
+    .fin-bullets li:last-child{border-bottom:none}
+    .fin-bullets li::before{content:'';width:4px;height:4px;background:var(--blue);border-radius:50%;flex-shrink:0;margin-top:7px}
+    .fin-card.primary .fin-bullets li::before{background:#93C5FD}
+    .cashea-badge{display:inline-flex;align-items:center;gap:6px;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:6px;padding:5px 10px;margin-top:12px;text-decoration:none}
+    .cashea-dot{width:8px;height:8px;background:#059669;border-radius:50%}
+    .cashea-text{font-size:12px;font-weight:600;color:#065F46}
+    .co-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .co-card{background:white;border-radius:12px;padding:24px;border:1px solid var(--border);transition:box-shadow 0.15s}
+    .co-card:hover{box-shadow:0 4px 20px rgba(10,22,40,0.08)}
+    .co-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .co-tag{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;background:var(--accent);color:var(--blue);padding:2px 8px;border-radius:4px}
+    .co-status-active{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:var(--ltgreen);color:var(--green);padding:2px 7px;border-radius:4px;white-space:nowrap}
+    .co-former{font-size:11px;color:#94A3B8;margin-bottom:6px;font-style:italic}
+    
+    
+    .co-name{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:5px}
+    .co-addr{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5}
+    .co-hr{border:none;border-top:1px solid var(--border);margin:10px 0}
+    .co-note{font-size:13px;color:#374151;line-height:1.6}
+    .mgmt-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+    .mgmt-lbl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:16px}
+    .mgmt-person{padding:14px 0;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:3px}
+    .mgmt-person:last-child{border-bottom:none}
+    .mgmt-name{font-size:14px;font-weight:600;color:var(--text)}
+    .mgmt-role{font-size:12px;color:var(--muted);line-height:1.5}
+    .own-desc{font-size:14px;color:#374151;line-height:1.75;margin-bottom:14px}
+    .own-box{background:white;border-radius:10px;padding:20px 22px;border:1px solid var(--border)}
+    .own-box p{font-size:14px;color:#374151;line-height:1.7}
+    .mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .mvv-card{border-radius:12px;padding:28px;border:1px solid var(--border)}
+    .mvv-mission{background:var(--navy);border-color:var(--navy)}
+    .mvv-vision{background:white}
+    .mvv-values{background:var(--ltblue);border-color:#BFDBFE}
+    .mvv-title{font-size:17px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .mvv-mission .mvv-title{color:white}
+    .mvv-vision .mvv-title,.mvv-values .mvv-title{color:var(--navy)}
+    .mvv-icon-sq{width:26px;height:26px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .mvv-icon-sq svg{width:14px;height:14px}
+    .mvv-text{font-size:14px;line-height:1.75}
+    .mvv-mission .mvv-text{color:#94A3B8}
+    .mvv-vision .mvv-text,.mvv-values .mvv-text{color:#374151}
+    .vals{list-style:none}
+    .vals li{padding:6px 0;font-size:14px;color:#374151;display:flex;align-items:center;gap:9px;border-bottom:1px solid rgba(29,78,216,0.1)}
+    .vals li:last-child{border-bottom:none}
+    .vals li::before{content:'';width:4px;height:4px;background:var(--blue);border-radius:50%;flex-shrink:0}
+    .ahead-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .ahead-card{background:white;border-radius:12px;padding:28px;border:1px solid var(--border)}
+    .ahead-highlight{background:var(--navy);border-color:var(--navy)}
+    .ahead-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+    .ahead-highlight .ahead-title{color:white}
+    .ahead-title-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ahead-title-icon svg{width:15px;height:15px}
+    .ahead-text{font-size:14px;line-height:1.8;color:#374151}
+    .ahead-highlight .ahead-text{color:#94A3B8}
+    .ahead-bullets{list-style:none;margin-top:14px}
+    .ahead-bullets li{font-size:13px;padding:6px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:9px;line-height:1.55;color:#374151}
+    .ahead-highlight .ahead-bullets li{border-color:rgba(255,255,255,0.08);color:#94A3B8}
+    .ahead-bullets li:last-child{border-bottom:none}
+    .ahead-bullets li::before{content:'';width:4px;height:4px;background:var(--blue);border-radius:50%;flex-shrink:0;margin-top:7px}
+    .ahead-highlight .ahead-bullets li::before{background:#93C5FD}
+    .ahead-right{display:flex;flex-direction:column;gap:20px}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .why-card{background:white;border-radius:10px;padding:22px;border:1px solid var(--border);text-align:center}
+    .why-num{font-size:32px;font-weight:700;color:var(--blue)}
+    .why-lbl{font-size:13px;color:var(--muted);margin-top:5px;line-height:1.45}
+    footer{background:var(--navy);padding:44px 48px;text-align:center}
+    .footer-name{font-size:18px;font-weight:700;color:white;margin-bottom:6px}
+    .footer-div{width:36px;height:2px;background:var(--blue);margin:14px auto}
+    .footer-meta{font-size:12px;color:#475569;line-height:1.9}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}.hero{padding:48px 20px 40px}.stats{grid-template-columns:repeat(2,1fr)}.content{padding:40px 20px}.about-grid,.mgmt-grid,.mvv-grid,.ahead-grid,.financing-grid,.coverage-banner{grid-template-columns:1fr}.co-grid,.why-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo">MAG</div>
+    <div><div class="nav-title">Maldonado Automotive Group</div><div class="nav-sub">Business Company Profile — 2026</div></div>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a><a href="#companies">Companies</a><a href="#financing">Financing</a><a href="#management">Management</a><a href="#ahead">Looking Ahead</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag">Confidential — Business Company Profile</div>
+  <h1>Maldonado<br><span>Automotive Group</span></h1>
+  <p class="hero-sub">A family-owned automotive group with over 50 years of OEM franchise experience in Venezuela and Latin America — with the infrastructure, relationships, and national coverage to take on new distribution mandates across Venezuela and Panama.</p>
+  <div class="hero-meta">
+    <div class="meta-item"><span class="meta-label">Established</span><span class="meta-value">1976 — Maracay, Venezuela</span></div>
+    <div class="meta-item"><span class="meta-label">Distribution Coverage</span><span class="meta-value">All of Venezuela + Panama</span></div>
+    <div class="meta-item"><span class="meta-label">Sector</span><span class="meta-value">Automotive Distribution &amp; Retail</span></div>
+    <div class="meta-item"><span class="meta-label">Document</span><span class="meta-value">April 2026 — Confidential</span></div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">50+</div><div class="stat-lbl">Years of OEM franchise<br>management in Venezuela</div></div>
+  <div class="stat"><div class="stat-num">500+</div><div class="stat-lbl">Employees across all<br>group companies</div></div>
+  <div class="stat"><div class="stat-num">9</div><div class="stat-lbl">Operating entities across<br>Venezuela and Panama</div></div>
+  <div class="stat"><div class="stat-num">30K+</div><div class="stat-lbl">Vehicles retailed across<br>the group's history</div></div>
+</div>
+
+<div class="content">
+
+  <!-- ABOUT -->
+  <section class="sec" id="about">
+    <div class="sec-hdr">
+      <div class="sec-icon icon-blue"><svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+      <div><div class="sec-title">About Us</div><div class="sec-sub">Who we are, what we have built, and what we can deliver</div></div>
+    </div>
+
+    <div class="coverage-banner">
+      <div>
+        <div class="coverage-label">Motorcycle &amp; Automobile Distribution Mandate</div>
+        <div class="coverage-value">All of Venezuela — National Coverage</div>
+        <div class="coverage-note">A new mandate with MAG is a national mandate. The Group's network, logistics, and OEM relationships span Venezuela entirely — not limited to Maracay or Aragua.</div>
+      </div>
+      <div>
+        <div class="coverage-label">International Distribution Entity</div>
+        <div class="coverage-value">Panama — Suramericana de Flotas, S.A.</div>
+        <div class="coverage-note">Active Panama entity — previously authorized distributor for GM, Ford, Chrysler, and Toyota. Available now to structure distribution agreements covering Panama.</div>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>The Maldonado Automotive Group is a family-owned group with over 50 years of continuous OEM franchise management in Venezuela. Since 1976, the Group has built and operated franchised dealerships for the world's most recognized automotive brands — earning national #1 sales rankings across multiple brands simultaneously, verified by OEM reporting systems.</p>
+
+        <p><strong>Currently active mandates:</strong>&nbsp;<span class="active-tag">Toyota</span><span class="active-tag">Ford</span><span class="active-tag">Chrysler · Jeep · RAM · Dodge</span>&nbsp;— sustained through Venezuela's most challenging economic decade, demonstrating the Group's operational resilience and commitment to franchise standards.</p>
+
+        <p><strong>Brands previously represented:</strong>&nbsp;<span class="track-tag">Chevrolet</span><span class="track-tag">International Trucks (Navistar)</span><span class="track-tag">Mercedes-Benz</span><span class="track-tag">Isuzu</span><span class="track-tag">Suzuki</span>&nbsp;— dealership facilities remain fully active and operational.</p>
+
+        <p>The Group's most valued asset is its human capital: over 500 trained professionals across sales, after-sales service, and spare parts. Full 3S infrastructure is operational and ready to support a new brand mandate from day one, at national scale across Venezuela.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-row"><div class="info-lbl">Founded</div><div class="info-val">1976 — 50+ years of continuous OEM partnership</div></div>
+        <div class="info-row"><div class="info-lbl">Headquarters</div><div class="info-val">Maracay, Estado Aragua, Venezuela</div></div>
+        <div class="info-row"><div class="info-lbl">Distribution coverage</div><div class="info-val">All of Venezuela (national) + Panama</div></div>
+        <div class="info-row"><div class="info-lbl">Active mandates</div><div class="info-val">Toyota · Ford · Chrysler / Jeep / RAM / Dodge</div></div>
+        <div class="info-row"><div class="info-lbl">Employees</div><div class="info-val">500+ across sales, service &amp; parts</div></div>
+        <div class="info-row"><div class="info-lbl">Infrastructure</div><div class="info-val">Full 3S — national footprint, ready from Day 1</div></div>
+        <div class="info-row"><div class="info-lbl">Panama entity</div><div class="info-val">Suramericana de Flotas, S.A. — active</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCING -->
+  <section class="sec" id="financing">
+    <div class="sec-hdr">
+      <div class="sec-icon icon-green"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+      <div><div class="sec-title">Financing Infrastructure</div><div class="sec-sub">Consumer credit and buy-now-pay-later — a core competitive advantage</div></div>
+    </div>
+    <div class="financing-grid">
+      <div class="fin-card primary">
+        <div class="fin-title">Consumer Financing — The Decisive Advantage</div>
+        <div class="fin-text">In markets like Venezuela, financing is not an add-on — it is the primary driver of motorcycle and vehicle sales volume. The Group is committed to offering end-consumer financing at point of sale, removing the single largest barrier to purchase.</div>
+        <ul class="fin-bullets">
+          <li>Structured installment financing for motorcycle purchases — enabling buyers who cannot afford outright purchase in a predominantly cash-transactional economy</li>
+          <li>Financing offered directly through the dealership network — no dependency on Venezuela's constrained banking system</li>
+          <li>Fleet and B2B financing packages for commercial operators, cooperatives, and delivery companies — the most efficient channel for high-volume motorcycle sales</li>
+          <li>No competitor currently offers structured consumer financing in the Venezuelan motorcycle segment — this is the primary market gap the Group is positioned to fill</li>
+        </ul>
+      </div>
+      <div class="fin-card">
+        <div class="fin-title">Strategic Alliance — Cashea</div>
+        <div class="fin-text">The Group is establishing a partnership with Cashea — Venezuela's leading buy-now-pay-later platform, holding over 70% of the consumer credit market and featured by Bloomberg, Yahoo Finance, and PYMNTS as Venezuela's defining fintech success story.</div>
+        <ul class="fin-bullets">
+          <li>0% interest installment purchasing across 3,500+ merchants — the Group brings motorcycle and vehicle sales into this ecosystem</li>
+          <li>Credit pre-approval in under 3 minutes — customers can walk in and finance a motorcycle the same day with no banking intermediary</li>
+          <li>Access to Cashea's existing user base opens the Group to buyer segments that have never previously had access to vehicle financing</li>
+          <li>The Cashea alliance makes the Group's financing infrastructure more robust than any current motorcycle distributor operating in Venezuela</li>
+        </ul>
+        <a href="https://www.cashea.app" target="_blank" class="cashea-badge">
+          <div class="cashea-dot"></div>
+          <div class="cashea-text">cashea.app — Venezuela's #1 BNPL Platform · 70%+ Market Share</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANIES -->
+  <section class="sec" id="companies">
+    <div class="sec-hdr">
+      <div class="sec-icon icon-purple"><svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div><div class="sec-title">Our Companies</div><div class="sec-sub">Nine operating entities — the infrastructure that proves national distribution capability</div></div>
+    </div>
+    <div class="co-grid">
+
+      <div class="co-card">
+        <div class="co-header"><div class="co-tag">Toyota Authorized Dealer</div><div class="co-status-active">Active</div></div>
+        <div class="co-name">Motores La Victoria, C.A.</div>
+        <div class="co-addr">Calle Paez, Edif Toyota, La Victoria, Estado Aragua</div>
+        <hr class="co-hr"/>
+        <div class="co-note">Toyota franchise covering the Aragua interior. Full 3S: new vehicle sales, genuine spare parts, factory-trained service. Currently active — Toyota's global franchise standards are among the most demanding in the industry, making this active mandate a strong signal of operational quality.</div>
+      </div>
+
+      <div class="co-card">
+        <div class="co-header"><div class="co-tag">Ford Authorized Dealer</div><div class="co-status-active">Active</div></div>
+        <div class="co-name">Autoplaza, C.A.</div>
+        <div class="co-addr">Av. Bolivar de Maracay, Sector San Jacinto, Edificio Autoplaza, Maracay, Estado Aragua</div>
+        <hr class="co-hr"/>
+        <div class="co-note">Ranked #1 and #2 nationally among 50+ Ford dealers. Nearly 3,000 units sold in first five years. Currently active — one of Venezuela's top-ranked Ford dealers by historical OEM reporting.</div>
+      </div>
+
+      <div class="co-card">
+        <div class="co-header"><div class="co-tag">Chrysler · Jeep · RAM · Dodge</div><div class="co-status-active">Active</div></div>
+        <div class="co-name">Motomar 2000, C.A.</div>
+        <div class="co-addr">Av. Bolivar de Maracay, Sector San Jacinto, Maracay, Estado Aragua</div>
+        <hr class="co-hr"/>
+        <div class="co-note">Three consecutive years ranked #1 nationally among 33+ Chrysler/Stellantis dealers. Over 8,100 units sold. Currently active — the Group's primary demonstration of maintaining OEM standards through Venezuela's most challenging economic period.</div>
+      </div>
+
+      <div class="co-card">
+        <div class="co-header"><div class="co-tag">Dealership — Active</div><div class="co-status-active">Active</div></div>
+        <div class="co-name">Maquinas 2000, C.A.</div>
+        <div class="co-addr">Av. Aragua, Sector Barrio San Ignacio, Maracay, Estado Aragua</div>
+        <div class="co-former">Formerly: Chevrolet Authorized Dealer</div>
+        <hr class="co-hr"/>
+        <div class="co-note">Dealership fully operational. Previously held the Chevrolet mandate — Top 5 nationally across 90+ dealers, over 19,000 units sold. Facilities and staff ready to represent a new brand from day one.</div>
+      </div>
+
+      <div class="co-card">
+        <div class="co-header"><div class="co-tag">Dealership — Active</div><div class="co-status-active">Active</div></div>
+        <div class="co-name">Maquinas Camiones, C.A.</div>
+        <div class="co-addr">Av. Aragua, asentamiento La Morita, Maracay, Estado Aragua</div>
+        <div class="co-former">Formerly: Chevrolet Trucks Authorized Dealer</div>
+        <hr class="co-hr"/>
+        <div class="co-note">Commercial vehicle dealership fully operational. Demonstrates the Group's B2B and fleet sales capability — directly applicable to motorcycle commercial operator and fleet channels.</div>
+      </div>
+
+      <div class="co-card">
+        <div class="co-header"><div class="co-tag">Dealership — Active</div><div class="co-status-active">Active</div></div>
+        <div class="co-name">Venezolana de Camiones International, C.A.</div>
+        <div class="co-addr">Valencia, Estado Carabobo + Barcelona, Estado Anzoategui</div>
+        <div class="co-former">Formerly: Exclusive National Distributor — International Trucks (Navistar)</div>
+        <hr class="co-hr"/>
+        <div class="co-note">Two-location dealership fully operational. Previously held the exclusive national Navistar distribution mandate across all of Venezuela — the exact distribution model the Group now seeks to replicate in motorcycles.</div>
+      </div>
+
+      <div class="co-card">
+        <div class="co-header"><div class="co-tag">Dealership — Active</div><div class="co-status-active">Active</div></div>
+        <div class="co-name">Venezolana de Camiones Oriente, C.A.</div>
+        <div class="co-addr">Av. Jose Antonio Anzoategui, Via Aeropuerto, Barcelona, Estado Anzoategui</div>
+        <div class="co-former">Formerly: Commercial Vehicles — Eastern Venezuela</div>
+        <hr class="co-hr"/>
+        <div class="co-note">Eastern Venezuela dealership fully operational. Confirms the Group's genuine national coverage capability — extending far beyond Aragua into Venezuela's most economically active eastern regions.</div>
+      </div>
+
+      <div class="co-card">
+        <div class="co-header"><div class="co-tag">Overseas Fleet Distributor — Panama</div><div class="co-status-active">Active Entity</div></div>
+        <div class="co-name">Suramericana de Flotas, S.A.</div>
+        <div class="co-addr">Edif. Paitilla Office Tower, Piso 11, Of. 11-01, Panama City, Panama</div>
+        <hr class="co-hr"/>
+        <div class="co-note">Active Panama entity — previously authorized overseas distributor for GM, Ford, Chrysler, and Toyota with 5,000+ fleet units in first two years of operation. Available immediately to structure distribution agreements covering Panama.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MANAGEMENT -->
+  <section class="sec" id="management">
+    <div class="sec-hdr">
+      <div class="sec-icon icon-amber"><svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div><div class="sec-title">Management &amp; Ownership</div><div class="sec-sub">Leadership structure and ownership composition</div></div>
+    </div>
+    <div class="mgmt-grid">
+      <div>
+        <div class="mgmt-lbl">Executive Leadership</div>
+        <div class="mgmt-person">
+          <div class="mgmt-name">Mr. Jhonny Maldonado Jimenez</div>
+          <div class="mgmt-role">President — Maquinas 2000, Maquinas Camiones, Suramericana de Flotas</div>
+        </div>
+        <div class="mgmt-person">
+          <div class="mgmt-name">Mr. Manuel Maldonado Jimenez</div>
+          <div class="mgmt-role">President — Motomar 2000, Motores La Victoria</div>
+        </div>
+        <div class="mgmt-person">
+          <div class="mgmt-name">Mr. William di Pietro Jimenez</div>
+          <div class="mgmt-role">President — Autoplaza, Venezolana de Camiones International, Venezolana de Camiones Oriente</div>
+        </div>
+        <div class="mgmt-person">
+          <div class="mgmt-name">Diego Aparicio</div>
+          <div class="mgmt-role">Director of Business Development &amp; Strategic Partnerships — Leading the Group's regional expansion strategy, OEM distribution mandates, and new mobility ventures across Latin America and the Caribbean. Primary contact for all new brand partnership discussions.</div>
+        </div>
+      </div>
+      <div>
+        <div class="mgmt-lbl">Ownership Structure</div>
+        <div class="own-desc">The Maldonado Automotive Group is entirely and exclusively owned by the Maldonado family — a respected Venezuelan entrepreneurial family with over 50 years of continuous commitment to the automotive industry.</div>
+        <div class="own-box">
+          <p>The Group is 100% family-owned with no external shareholders. Ownership is held exclusively by members of the Maldonado family, providing unified decision-making authority, long-term strategic alignment, and the financial flexibility to act decisively on new distribution opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MVV -->
+  <section class="sec">
+    <div class="sec-hdr">
+      <div class="sec-icon icon-teal"><svg viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+      <div><div class="sec-title">Mission, Vision &amp; Values</div><div class="sec-sub">The principles that have guided the Group for over five decades</div></div>
+    </div>
+    <div class="mvv-grid">
+      <div class="mvv-card mvv-mission">
+        <div class="mvv-title">
+          <div class="mvv-icon-sq" style="background:rgba(255,255,255,0.12)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          Mission
+        </div>
+        <div class="mvv-text">To be the most successful automotive group in sales and after-sales — delivering measurable results, setting performance benchmarks above industry standards, and continuously innovating our processes to better serve our customers and OEM partners.</div>
+      </div>
+      <div class="mvv-card mvv-vision">
+        <div class="mvv-title">
+          <div class="mvv-icon-sq" style="background:#EFF6FF"><svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/></svg></div>
+          Vision
+        </div>
+        <div class="mvv-text">To be the leading automotive distribution platform in Venezuela and Latin America — driven by data, a relentless pursuit of growth, and the constant evolution of our operations to stay ahead of the markets we serve.</div>
+      </div>
+      <div class="mvv-card mvv-values">
+        <div class="mvv-title">
+          <div class="mvv-icon-sq" style="background:#DBEAFE"><svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          Values
+        </div>
+        <ul class="vals">
+          <li>Results &amp; Accountability</li>
+          <li>Data-Driven Decision Making</li>
+          <li>Innovation &amp; Continuous Improvement</li>
+          <li>Honesty &amp; Transparency</li>
+          <li>Customer Satisfaction</li>
+          <li>Teamwork &amp; Mutual Respect</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKING AHEAD -->
+  <section class="sec" id="ahead">
+    <div class="sec-hdr">
+      <div class="sec-icon icon-rose"><svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></div>
+      <div><div class="sec-title">Looking Ahead — 2026 &amp; Beyond</div><div class="sec-sub">Strategic expansion into distribution and new mobility segments</div></div>
+    </div>
+    <div class="ahead-grid">
+      <div class="ahead-card ahead-highlight">
+        <div class="ahead-title">
+          <div class="ahead-title-icon" style="background:rgba(255,255,255,0.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><line x1="13" y1="16" x2="17" y2="16"/></svg></div>
+          Mass Mobility — Motorcycle Segment
+        </div>
+        <div class="ahead-text">Over the past several years, a significant segment of Venezuela's urban economy has shifted toward USD-denominated transactions — a structural adaptation that has emerged organically in response to currency instability. A meaningful portion of Venezuela's working population now earns, saves, and spends in US dollars, particularly in urban centers and commerce-driven regions. This hard-currency consumer segment represents the primary target buyer for a branded, financed motorcycle in Venezuela today.</div>
+        <ul class="ahead-bullets">
+          <li>The USD-transactional segment of Venezuela's economy — salaried professionals, self-employed workers, remittance recipients, and commercial operators — has demonstrated consistent spending capacity in durable goods categories</li>
+          <li>Motorcycles represent the first major mobility upgrade for this segment — affordable, immediately income-generating, and practical in urban environments with limited public transport</li>
+          <li>Venezuela has no established professional Indian motorcycle distribution — the market is served informally with no 3S infrastructure, no consumer financing, and no brand equity investment by any major OEM</li>
+          <li>The Group's national dealership network, trained workforce, Cashea financing alliance, and 50-year OEM track record provide an immediate, ready-to-launch platform for a national motorcycle distribution mandate</li>
+          <li>The Group is actively pursuing partnerships with leading Indian motorcycle manufacturers to establish a professional, financed, branded operation across all of Venezuela</li>
+        </ul>
+      </div>
+      <div class="ahead-right">
+        <div class="ahead-card">
+          <div class="ahead-title">
+            <div class="ahead-title-icon" style="background:#EFF6FF"><svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            OEM Re-Entry — Venezuela Automobile Distribution
+          </div>
+          <div class="ahead-text">Multiple international OEMs that previously operated in Venezuela are actively evaluating re-entry as the country's geopolitical situation evolves. The Group's 50-year track record, three active mandates, and national infrastructure make it the natural distribution partner for any brand establishing a formal Venezuela presence.</div>
+          <ul class="ahead-bullets">
+            <li>Three active OEM mandates maintained through Venezuela's most challenging economic period — proof of operational resilience</li>
+            <li>Infrastructure ready nationally: showrooms, service centers, parts warehousing, trained staff</li>
+            <li>Cashea financing alliance differentiates from all current market operators</li>
+          </ul>
+        </div>
+        <div class="ahead-card">
+          <div class="ahead-title">
+            <div class="ahead-title-icon" style="background:#F0FDFA"><svg viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            Regional Distribution — CA &amp; Caribbean
+          </div>
+          <div class="ahead-text">Building on the Suramericana de Flotas Panama platform, the Group is expanding its distribution footprint across Central America and the Caribbean where professional OEM distribution is absent or underdeveloped.</div>
+          <ul class="ahead-bullets">
+            <li>Panama entity active and immediately available for cross-border distribution structuring</li>
+            <li>Caribbean motorcycle markets identified as high-growth, low-competition opportunities</li>
+            <li>Fleet and commercial vehicle distribution expertise transferable across all CA markets</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PARTNER -->
+  <section class="sec">
+    <div class="sec-hdr">
+      <div class="sec-icon icon-slate"><svg viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></div>
+      <div><div class="sec-title">Why Partner With MAG</div><div class="sec-sub">What every OEM evaluates — and what we deliver</div></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">50+</div><div class="why-lbl">Years of OEM franchise management across 9+ international brands</div></div>
+      <div class="why-card"><div class="why-num">9</div><div class="why-lbl">Operating entities providing immediate national distribution infrastructure</div></div>
+      <div class="why-card"><div class="why-num">500+</div><div class="why-lbl">Trained employees across sales, service &amp; parts — ready from Day 1</div></div>
+      <div class="why-card"><div class="why-num">#1</div><div class="why-lbl">National sales ranking achieved across multiple brands — OEM-verified results</div></div>
+      <div class="why-card"><div class="why-num">3S</div><div class="why-lbl">Full Sales, Service &amp; Spare Parts — national coverage, not limited to one region</div></div>
+      <div class="why-card"><div class="why-num">70%</div><div class="why-lbl">Cashea alliance — Venezuela's #1 BNPL platform enabling financed sales at scale</div></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-name">Maldonado Automotive Group</div>
+  <div class="footer-div"></div>
+  <div class="footer-meta">Maracay, Estado Aragua, Venezuela &nbsp;·&nbsp; Panama City, Panama<br>Established 1976 &nbsp;·&nbsp; Business Company Profile — April 2026 &nbsp;·&nbsp; Confidential — For Authorized Recipients Only</div>
+</footer>
+
+</body>
+</html>
